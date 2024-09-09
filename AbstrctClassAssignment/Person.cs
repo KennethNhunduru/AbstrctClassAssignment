@@ -14,11 +14,18 @@ namespace AbstrctClassAssignment
         public string lastName { get; set; }
 
         //Giving it the method SayName().
-        /*Since the SayName method is only implemented in the Employee class, this method has to have the 
-          keyword "virtual" which means the method gets inherited by the inheriting class, but the inheriting class
-          will have the ability to override the virtual method.*/
-        public virtual void SayName()
-        {            
-        }
+        //All persons should have their own SayName() method, but we CANNOT define the implementation in the abstract class.
+        //Might need to add bespoke features for specific persons
+        //To achieve the objective, we have to add an ABSTRACT SayName() method.
+        //The abstract method ony exists inside of an abstract class and contains NO IMPLEMENTATION.
+
+        public abstract void SayName();
+
+        //All the abstract method does is state that any method inheriting this class must implement the SayName() method.
+        //The inheriting class will then define the SayName() method somewhere in its class with the exact same name and
+        //return type and take exactly the same parameters
+
+        //In order to satisfy the foregoing requirement, the SayName() method in the Employee class will have to be
+        //defined with the "ovveride" keyword.       
     }
 }

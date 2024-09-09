@@ -10,9 +10,9 @@ namespace AbstrctClassAssignment
     public class Employee : Person
     {
         //Implementing the SayName() method inside of the Employee class.
-        //Virtual methods may have implementation, but CAN be overriden by the inheriting class.
-        /*Since our virtual method in the BASE CLASS Person has no implementation, 
-          this method has to have the "override" keyword to be able to override the virtual method.*/
+        //In order to satisfy the requirement of the abstract SayName() method in the BASE CLASS (Person class),
+        //we will define the SayName() method in the Employee class with the "override" keyword.
+
         public override void SayName()
         {
             Console.WriteLine("Your name is " + firstName + " " + lastName);
